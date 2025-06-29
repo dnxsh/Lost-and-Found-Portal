@@ -17,7 +17,7 @@ router.post("/add",async (req,res)=>{
             itemName:req.body.itemName,
             date:req.body.date,
             location:req.body.location,
-            image:img.name,
+            image:uniqueName,
             desc:req.body.desc
             }
             await ItemMod.create(objins);
