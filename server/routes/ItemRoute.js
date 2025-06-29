@@ -1,10 +1,13 @@
 const express=require("express")
 const router=express.Router();
 const ItemMod=require("../db/ItemsDB")
+const path = require("path");
 
 router.post("/add",async (req,res)=>{
     var img=req.files.image;
-    img.mv("./public/itemImage/"+img.name,async (err)=>{
+    const uniqueName = Date.now() + "_" + img.name;
+    const imagePath = path.join(__dirname, "../public/itemImage", uniqueName);
+    img.mv(imagePath,async (err)=>{
         if(err){
             throw err;
         }else{
