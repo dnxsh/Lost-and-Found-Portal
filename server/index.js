@@ -21,7 +21,7 @@ connectDB();
 const itemRoute=require("./routes/ItemRoute");
 app.use("/report",itemRoute);
 
-app.use('/itemImage', express.static(__dirname + '/public/itemImage'));
+app.use('/itemImage', express.static(path.join(__dirname, 'public/itemImage')));
 
 app.get("/",(req,res)=>{
     res.send("Hello")
