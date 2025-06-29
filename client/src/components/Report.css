@@ -1,0 +1,59 @@
+/* Centered section styling */
+.report-container {
+  background: linear-gradient(135deg, #d4f3e8, #ffffff);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.report-form-container {
+  background: linear-gradient(135deg, #eafaf1, #ffffff);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 90%;
+  margin: 40px auto;
+}
+
+/* Heading */
+.report-form-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #146c43;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Form fields */
+.form-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.form-control {
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  border-color: #198754;
+  box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+}
+
+/* Submit button */
+.submit-btn {
+  background-color: transparent;
+  color: #198754;
+  border: 2px solid #198754;
+}
+
+.submit-btn:hover {
+  background-color: #198754;
+  color: white;
+  transform: scale(1.05) ;
+}
