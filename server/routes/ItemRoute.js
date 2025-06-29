@@ -1,7 +1,6 @@
 const express=require("express")
 const router=express.Router();
 const ItemMod=require("../db/ItemsDB")
-const path = require("path");
 
 router.post("/add",async (req,res)=>{
     var img=req.files.image;
@@ -50,7 +49,7 @@ router.delete("/delete/:id", async (req, res) => {
     }
 
     //Delete the image file from the server
-    const imagePath = path.join(__dirname, "../public/itemImage", item.image);
+    const imagePath = path.join(__dirname, "../public/itemImage", uniqueName);
     fs.unlink(imagePath, (err) => {
       if (err) {
         console.warn("Image file could not be deleted:", err.message);
