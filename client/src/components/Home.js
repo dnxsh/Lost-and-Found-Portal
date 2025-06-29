@@ -16,23 +16,6 @@ function Home() {
         <button className="home-button outline" onClick={()=>navigate("/report")}>Report Lost Item</button>
         <button className="home-button outline" onClick={()=>navigate("/find")}>Find an Item</button>
       </div>
-      {/* <div className="dropdown">
-      <button
-        className="btn home-button outline dropdown-toggle"
-        type="button"
-        id="dropdownMenuButton"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        Dropdown button
-      </button>
-
-      <ul className="dropdown-menu home-button-dropdown" aria-labelledby="dropdownMenuButton">
-        <NavLink className="dropdown-item home-button outline" to='/report'>Report Items</NavLink>
-        <br></br>
-        <NavLink className="dropdown-item home-button outline" to='/find'>Find Items</NavLink>
-      </ul>
-    </div> */}
 
       </div>
       <Footer/>

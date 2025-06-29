@@ -7,7 +7,7 @@ function Find() {
   const [items,setItems]= useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:2000/report/show")
+    fetch("https://lost-and-found-portal-rtda.onrender.com/report/show")
       .then(res => res.json())
       .then(data => {
         setItems(data);
@@ -29,7 +29,7 @@ function Find() {
     const confirm = window.confirm("Are you sure you want to delete this item?");
     if (!confirm) return;
 
-    const res = await fetch(`http://localhost:2000/report/delete/${id}`, {
+    const res = await fetch(`https://lost-and-found-portal-rtda.onrender.com/delete/${id}`, {
       method: "DELETE",
     });
 
@@ -67,7 +67,7 @@ function Find() {
             <div className="row g-0">
               <div className="col-md-3 d-flex align-items-center justify-content-center p-2">
                 <img
-                  src={`http://localhost:2000/itemImage/${item.image}`}
+                  src={`https://lost-and-found-portal-rtda.onrender.com/itemImage/${item.image}`}
                   alt={item.title}
                   className="img-fluid rounded"
                   style={{ maxHeight: '200px' }}

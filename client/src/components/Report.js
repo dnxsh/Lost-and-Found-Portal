@@ -108,7 +108,7 @@ function Report() {
             fd.append("desc", desc);
 
             try {
-              const resp = await fetch("http://localhost:2000/report/add", {
+              const resp = await fetch("https://lost-and-found-portal-rtda.onrender.com/report/add", {
                 method: 'POST',
                 body: fd,
               });
